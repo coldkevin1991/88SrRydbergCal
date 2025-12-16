@@ -22,10 +22,10 @@ const LaserCalculator: React.FC = () => {
   const delta = series === 'S' ? DELTA_S : DELTA_D;
   const nStar = n - delta; // 有效主量子数
   const wavenumber = IP_3P0 - RYDBERG / (nStar * nStar); // cm^-1
-  const wavelengthUV = (10000000 / wavenumber).toFixed(4); // nm
-  const wavelengthFund = (parseFloat(wavelengthUV) * 2).toFixed(4); // nm
-  const frequency = (wavenumber * 0.0299792458).toFixed(4); // THz (c = 299792458 m/s)
-  const frequencyFund = (parseFloat(frequency) / 2).toFixed(4); // THz
+  const wavelengthUV = (10000000 / wavenumber).toFixed(7); // nm
+  const wavelengthFund = (parseFloat(wavelengthUV) * 2).toFixed(7); // nm
+  const frequency = (wavenumber * 0.0299792458).toFixed(7); // THz (c = 299792458 m/s)
+  const frequencyFund = (parseFloat(frequency) / 2).toFixed(7); // THz
 
   // 2. 线宽要求 (估算)
   // 1000/n^2 经验公式
